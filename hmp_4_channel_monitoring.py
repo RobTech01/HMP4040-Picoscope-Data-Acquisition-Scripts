@@ -35,8 +35,6 @@ import numpy as np
 #logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 #logging.debug('This log message appears on the screen.')
 
-MAX_ATTEMPTS = 2
-
 
 def plot_current(channel_frame, current_data, fig, plot, max_displayed_samples):
 
