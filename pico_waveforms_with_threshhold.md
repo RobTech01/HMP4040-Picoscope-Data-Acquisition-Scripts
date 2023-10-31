@@ -3,14 +3,13 @@ exceeds a threshold, and store the results in an HDF5 file using
 [<span class="underline">picosdk</span>](https://github.com/picotech/picosdk-python-wrappers)
 
 Example:
+```
+python3 pico\_waveforms\_with\_threshhold.py ./Your-Directory/ pico\_test.h5
+```
 
-|                                                                              |
-| ---------------------------------------------------------------------------- |
-| python3 pico\_waveforms\_with\_threshhold.py ./Your-Directory/ pico\_test.h5 |
-
-|                                                 |
-| ----------------------------------------------- |
-| python3 pico\_waveforms\_with\_threshhold.py -h |
+```
+python3 pico\_waveforms\_with\_threshhold.py -h
+```
 
 # Notes
 
