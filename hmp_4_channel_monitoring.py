@@ -35,6 +35,7 @@ import numpy as np
 #logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 #logging.debug('This log message appears on the screen.')
 
+MAX_FILE_NAME_INPUT_ATTEMPTS = 2
 
 def plot_current(channel_frame, current_data, fig, plot, max_displayed_samples):
 
@@ -71,14 +72,16 @@ def handle_file(file_address, attempts=0): # human readable & some formatting
 
     """
     Handles file creation and existing file scenarios, with a limit of 2 attempts.
-    
-    :param str file_address: The file path and name for the new or existing file
-    :param int attempts: The number of attempts made so far to handle the file
-    :returns: File address or exits the program
-    :rtype: str
+
+    Args:
+        file_address (str): The file path and name for the new or existing file
+        attempts (int): The number of attempts made so far to handle the file
+
+    Returns:
+        str: File address or exits the program
     """
 
-    if attempts >= 2:
+    if attempts >= MAX_FILE_NAME_INPUT_ATTEMPTS:
         print("Maximum number of attempts reached. Exiting program.")
         exit()
 
@@ -210,10 +213,12 @@ def measure_and_log_voltage_current(power_supply, voltage_labels, current_labels
 def load_data_into_dataframe(file_address):
     """
     Loads the logged data from a text file into a Pandas DataFrame.
-    
-    :param str file_address: The file path and name of the existing log file.
-    :returns: A Pandas DataFrame containing the logged data.
-    :rtype: pd.DataFrame
+
+    Args:
+        file_address (str): The file path and name of the existing log file.
+
+    Returns:
+        pd.DataFrame: A Pandas DataFrame containing the logged data.
     """
     
     # Skip the first 3 rows and read the tab-separated values into a DataFrame
