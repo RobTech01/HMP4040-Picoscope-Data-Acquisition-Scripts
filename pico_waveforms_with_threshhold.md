@@ -1,3 +1,5 @@
+# pico_waveforms_with_threshhold.py
+
 Capture a defined number of waveforms using a PicoScope when the voltage
 exceeds a threshold, and store the results in an HDF5 file using
 [<span class="underline">picosdk</span>](https://github.com/picotech/picosdk-python-wrappers)
@@ -11,7 +13,7 @@ python3 pico\_waveforms\_with\_threshhold.py ./Your-Directory/ pico\_test.h5
 python3 pico\_waveforms\_with\_threshhold.py -h
 ```
 
-# Notes
+## Notes
 
 The program executes in **Block-Mode** on the Picoscope. If the
 threshold was not surpassed in the measurement time interval, the
@@ -23,9 +25,9 @@ To add
 to your installation you can just download it from the GitHub link above
 and move it to a folder where your machine finds libraries manually.
 
-# Parser
+## Parser
 
-## Required
+### Required
 
 <table>
 <tbody>
@@ -37,7 +39,7 @@ and move it to a folder where your machine finds libraries manually.
 </tbody>
 </table>
 
-## Optional
+### Optional
 
 <table>
 <tbody>
@@ -50,9 +52,9 @@ and move it to a folder where your machine finds libraries manually.
 </tbody>
 </table>
 
-# Important Functions
+## Important Functions
 
-### save\_waveform\_data(file\_address, waveform\_data, metadata): 
+#### save\_waveform\_data(file\_address, waveform\_data, metadata): 
 
 <table>
 <tbody>
@@ -66,7 +68,7 @@ and move it to a folder where your machine finds libraries manually.
 </tbody>
 </table>
 
-### get\_waveform\_data(file\_address):
+#### get\_waveform\_data(file\_address):
 
 <table>
 <tbody>
