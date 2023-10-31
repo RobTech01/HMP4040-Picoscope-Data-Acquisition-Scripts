@@ -65,7 +65,7 @@ def save_waveform_data(file_address, waveform_data, metadata):
         f.attrs.update(metadata)
 
 def get_waveform_data(file_address):
-    """Read the waveform data from the .h5 file
+    """Read the waveform data from the .h5 file return an numpy array
     
     Args:
         file_address (str): The file path and name for the new file.
