@@ -4,7 +4,6 @@ Searches visa connections through
 [<span class="underline">pyvisa</span>](https://pyvisa.readthedocs.io/en/latest/)
 to read out a HMP4040 to a log file (human readable .txt.) and visually
 displays all channels with actual measured current
-
 values using
 [<span class="underline">tkinter</span>](https://docs.python.org/3/library/tkinter.html)
 and [<span class="underline">matplotlib</span>](https://matplotlib.org/)
